@@ -21,6 +21,9 @@ A study project for **Android memory leaks** and safe practices. This app demons
 
 ---
 
+##Banner
+![MEMORY_LEAK](https://github.com/user-attachments/assets/df428ada-73e7-4411-a2f4-7d5a056d2612)
+
 
 ## Project Structure
 
@@ -42,7 +45,7 @@ com.codexorbit.oom_memoryleaks
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/sudesh95/memory-leaks.git
+git clone https://github.com/sudesh095/memory-leaks.git
 ```
 
 2. Open in **Android Studio** and build the project.  
