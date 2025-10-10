@@ -1,18 +1,22 @@
 package com.codexorbit.oom_memoryleaks.presentation.views
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.codexorbit.oom_memoryleaks.utils.AppConstants.BACK
 
 @Composable
-fun FixedObserverScreen(onClick:() -> Unit){
+fun FixedObserverScreen(onClick:(String) -> Unit){
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(Unit) {
 
@@ -32,11 +36,11 @@ fun FixedObserverScreen(onClick:() -> Unit){
     }
 
     Column(Modifier.fillMaxSize()) {
-        Text("Fixed screen with LifecycleObserver")
 
-        MyButton(text = "GO Back", color = Color.Blue) {
-            onClick()
-        }
+        CommonToolbar("Fixed Observer", onBackClick = {onClick(BACK)})
+        Spacer(modifier = Modifier.height(40.dp))
+
+        Text("Fixed screen with LifecycleObserver")
     }
 
 }

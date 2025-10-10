@@ -20,7 +20,7 @@ import com.codexorbit.oom_memoryleaks.utils.AppConstants
 import com.codexorbit.oom_memoryleaks.utils.AppConstants.BACK
 
 @Composable
-fun HomeScreen(
+fun JenkyScreen(
     onClick: (String) -> Unit
 ) {
 
@@ -29,29 +29,15 @@ fun HomeScreen(
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Top
     ) {
-        CommonToolbar("Home Screen", canShowBackIcon = false,onBackClick = {onClick(BACK)})
+        CommonToolbar("Jenky Demo", onBackClick = {onClick(BACK)})
         MyButton(
-            text = "Memory Leaks and OOM", color = Color.Green,
-            onClick = { onClick(AppConstants.MEMORY_LEAK) })
+            text = "Jenky List Screen", color = Color.Red,
+            onClick = { onClick(AppConstants.JENKY_LIST_SCREEN) })
 
         MyButton(
-            text = "Jenky Screen", color = Color.Green,
-            onClick = { onClick(AppConstants.JENKY_SCREEN) })
+            text = "Smooth List Screen", color = Color.Green,
+            onClick = { onClick(AppConstants.SMOOTH_LIST_SCREEN) })
     }
 
 
-}
-
-@Composable
-fun MyButton(text: String, color: Color = Color.Red, onClick: () -> Unit) {
-    Button(
-        modifier = Modifier.padding(vertical = 10.dp),
-        onClick = { onClick() },
-        colors = ButtonDefaults.buttonColors(
-            containerColor = color.copy(alpha = 0.7f),
-            contentColor = Color.White
-        )
-    ) {
-        Text(text)
-    }
 }
