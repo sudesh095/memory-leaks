@@ -2,6 +2,12 @@ package com.codexorbit.oom_memoryleaks.utils
 
 object AppConstants{
     const val HOME = "home"
+    const val BACK = "back"
+    const val MEMORY_LEAK = "memoryLeak"
+    const val JENKY_SCREEN = "jenkyScreen"
+    const val JENKY_LIST_SCREEN = "jenkyListScreen"
+    const val SMOOTH_LIST_SCREEN = "smoothListScreen"
+    const val CODE_SAMPLE = "codeSample"
     const val LEAKY_OBSERVER = "leakyObserver"
     const val FIXED_OBSERVER = "fixedObserver"
     const val LEAKY_COROUTINE = "leakyCoroutine"
